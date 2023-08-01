@@ -32,5 +32,9 @@ module.exports = {
     'react/require-default-props': 0,
     'import/prefer-default-export': 0,
     'import/extensions': 0,
+    'no-param-reassign': [
+      2,
+      { props: true, ignorePropertyModificationsFor: ['state'] },
+    ],
   },
 };
