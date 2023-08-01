@@ -1,7 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
+import colorSchemeReducer from './colorSchemeSlice';
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    colorScheme: colorSchemeReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
