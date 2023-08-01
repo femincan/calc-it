@@ -8,6 +8,9 @@ dependencies:
   '@emotion/react':
     specifier: ^11.11.1
     version: 11.11.1(@types/react@18.2.15)(react@18.2.0)
+  '@fontsource/work-sans':
+    specifier: ^5.0.5
+    version: 5.0.5
   '@mantine/core':
     specifier: ^6.0.17
     version: 6.0.17(@emotion/react@11.11.1)(@mantine/hooks@6.0.17)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)
@@ -500,6 +503,10 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tabbable: 6.2.0
+    dev: false
+
+  /@fontsource/work-sans@5.0.5:
+    resolution: {integrity: sha512-ScwPev6F5fgMWjag35cOOtuHqoDvF19ktod2RsrrTEPDORM9k44lixf33SP3uLVcgbnem74uol+bWL3c+pzoiQ==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:
