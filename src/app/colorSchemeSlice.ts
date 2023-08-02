@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { ColorScheme } from '@mantine/core';
 import type { RootState } from './store';
 
-const colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+const colorScheme: ColorScheme = window.matchMedia(
+  '(prefers-color-scheme: dark)',
+).matches
   ? 'dark'
   : 'light';
 
-const initialState: {
-  value: typeof colorScheme;
-} = {
+const initialState = {
   value: colorScheme,
 };
 
