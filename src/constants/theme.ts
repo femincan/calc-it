@@ -19,18 +19,21 @@ export const theme: MantineThemeOverride = {
       '#393D5F',
     ],
     gray: ['#F1F2F3', '#D2D3DA', '#2E2F38', '#4E505F'],
+    background: ['#17171C', '#FFFFFF'],
   },
   primaryColor: 'brand',
   primaryShade: 3,
   globalStyles: (mantineTheme) => ({
+    'html, body, #root': {
+      height: '100%',
+    },
     body: {
       background: `no-repeat center/cover url(${
         mantineTheme.colorScheme === 'dark' ? BgDark : BgLight
       })`,
       width: '100vw',
       maxWidth: '100%',
-      minHeight: '100vh',
-      height: '100%',
+      color: mantineTheme.colorScheme === 'dark' ? '#FFFFFF' : '#000000',
     },
   }),
   activeStyles: {
