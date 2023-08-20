@@ -20,6 +20,9 @@ dependencies:
   '@reduxjs/toolkit':
     specifier: ^1.9.5
     version: 1.9.5(react-redux@8.1.1)(react@18.2.0)
+  calculator-utility:
+    specifier: ^0.4.0
+    version: 0.4.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1623,6 +1626,11 @@ packages:
     dependencies:
       run-applescript: 5.0.0
     dev: true
+
+  /calculator-utility@0.4.0:
+    resolution: {integrity: sha512-hf6MtMNuzvP1dlwDzX6vKLOgV1oxNYYGWoWGC31oYRmiAFEi3FJfSakI2zp451fLPPz+1+drkVk6rhfx5FtKOQ==}
+    engines: {node: '>= 12'}
+    dev: false
 
   /call-bind@1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
