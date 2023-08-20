@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import store from './app/store';
-import { MantineProviderWithColorScheme } from './components';
+import { MantineProviderWithColorScheme } from './components/MantineProviderWithColorScheme';
 import App from './App';
 
 import '@fontsource/work-sans/300.css';
