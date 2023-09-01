@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.9.5
     version: 1.9.5(react-redux@8.1.2)(react@18.2.0)
   calculator-utility:
-    specifier: ^0.5.1
-    version: 0.5.1
+    specifier: ^0.5.2
+    version: 0.5.2
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1585,8 +1585,8 @@ packages:
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
     dev: true
 
-  /calculator-utility@0.5.1:
-    resolution: {integrity: sha512-USy+6AaxH+V+Z4smGl7UQ3QInJN2LvBe5k5gVVE+eIxMqHA83dE8200T02xYnWyG+ZJTk1ksQ5tOxhFOiLihBQ==}
+  /calculator-utility@0.5.2:
+    resolution: {integrity: sha512-IyzfnmRfayYT/IlmoJ+Aj7t6HZjOLJT39U6FQQz/C4F/inWCPQAI5y8vPC+5aOkR/OGduzph7N0yQUjDL0kRoA==}
     engines: {node: '>= 12'}
     dev: false
 
