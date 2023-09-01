@@ -23,6 +23,18 @@ module.exports = {
     },
   },
   rules: {
+    'no-unused-vars': 0,
+    'no-restricted-imports': 0,
+    '@typescript-eslint/no-unused-vars': 2,
+    '@typescript-eslint/no-restricted-imports': [
+      2,
+      {
+        name: 'react-redux',
+        importNames: ['useSelector', 'useDispatch'],
+        message:
+          'Use typed hooks `useAppDispatch` and `useAppSelector` instead.',
+      },
+    ],
     'react-refresh/only-export-components': [1, { allowConstantExport: true }],
     'react/function-component-definition': [
       2,
