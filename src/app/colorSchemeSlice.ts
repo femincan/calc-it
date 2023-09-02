@@ -2,11 +2,19 @@ import { createSlice } from '@reduxjs/toolkit';
 import { ColorScheme } from '@mantine/core';
 import type { RootState } from './store';
 
-const colorScheme: ColorScheme = window.matchMedia(
-  '(prefers-color-scheme: dark)',
-).matches
-  ? 'dark'
-  : 'light';
+let colorScheme: ColorScheme;
+
+const localColorScheme = localStorage.getItem('colorScheme');
+
+if (localColorScheme === 'dark' || localColorScheme === 'light') {
+  colorScheme = localColorScheme;
+} else {
+  colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
+
+  localStorage.setItem('colorScheme', colorScheme);
+}
 
 const initialState = {
   value: colorScheme,
@@ -18,6 +26,7 @@ export const colorSchemeSlice = createSlice({
   reducers: {
     toggle: (state) => {
       state.value = state.value === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('colorScheme', state.value);
     },
   },
 });
