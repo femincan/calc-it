@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import colorSchemeReducer from './colorSchemeSlice';
+import calculatorReducer from './calculatorSlice';
 
 const store = configureStore({
   reducer: {
     colorScheme: colorSchemeReducer,
+    calculator: calculatorReducer,
   },
 });
 
