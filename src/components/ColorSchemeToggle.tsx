@@ -30,13 +30,13 @@ export const ColorSchemeToggle = () => {
       styles={(theme) => ({
         thumb: {
           backgroundColor: isColorSchemeDark
-            ? theme.colors.gray[3]
-            : theme.colors.gray[1],
+            ? theme.colors.gray[6]
+            : theme.colors.gray[2],
           border: 'none',
         },
         track: {
           backgroundColor: isColorSchemeDark
-            ? theme.colors.gray[2]
+            ? theme.colors.gray[4]
             : theme.colors.gray[0],
         },
       })}

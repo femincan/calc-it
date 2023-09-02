@@ -45,14 +45,14 @@ export const numericKeys: Key[] = [
 
 export const colorMap = {
   light: {
-    action: 'gray.1',
+    action: 'gray.2',
     operator: 'brand',
     numeric: 'gray.0',
   },
   dark: {
-    action: 'gray.3',
+    action: 'gray.6',
     operator: 'brand',
-    numeric: 'gray.2',
+    numeric: 'gray.4',
   },
 };
 
