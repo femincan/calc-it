@@ -25,10 +25,10 @@ export const theme: MantineThemeOverride = {
   primaryShade: 3,
   globalStyles: (mantineTheme) => ({
     'html, body, #root': {
-      height: '100%',
+      minHeight: '100vh',
     },
     body: {
-      background: `no-repeat center/cover url(${
+      background: `fixed no-repeat center/cover url(${
         mantineTheme.colorScheme === 'dark' ? BgDark : BgLight
       })`,
       width: '100vw',
@@ -41,8 +41,7 @@ export const theme: MantineThemeOverride = {
   },
   radius: {
     container: '20px',
-    toggle: '16px',
-    button: '24px',
+    button: '20px',
     indicator: '100px',
   },
 };
