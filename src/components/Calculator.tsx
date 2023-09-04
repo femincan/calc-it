@@ -13,7 +13,7 @@ export const Calculator = () => {
       direction='column'
       gap='xl'
       sx={(theme) => ({
-        flex: 1,
+        height: 635,
         width: 315,
         backgroundColor: isColorSchemeDark
           ? theme.colors.background[0]

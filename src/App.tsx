@@ -7,7 +7,7 @@ const App = () => (
     <Flex
       direction='column'
       align='center'
-      justify='flex-start'
+      justify='center'
       gap='lg'
       sx={{ minHeight: '100vh', padding: 24 }}
     >
