@@ -6,7 +6,6 @@ A calculator app created with React with Vite (TypeScript), Redux, and Mantine U
 
 ![Application Screenshot](https://github.com/femincan/calc-it/assets/78358128/b61216dc-68ec-4219-9f9a-99023ffe7acc)
 
-
 ## Table of Contents
 
 - [Features](#features)
