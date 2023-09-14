@@ -1,10 +1,5 @@
 import { FunctionComponent } from 'react';
-import {
-  addDecimal,
-  addOperator,
-  clearAll,
-  clearOne,
-} from 'calculator-utility';
+import { addDecimal, clearAll, clearOne } from 'calculator-utility';
 
 import { ReactComponent as RemoveIcon } from '@src/assets/remove.svg';
 
@@ -16,19 +11,19 @@ export type Key<IncludeFunctionComponentValue extends boolean = false> = {
     : string;
 };
 
-export const actionKeys: Key<true>[] = [
+export const actionKeys = [
   { id: 'decimal', order: 1, value: '.' },
   { id: 'clear', order: 2, value: 'C' },
   { id: 'clear-one', order: 3, value: RemoveIcon },
-];
+] as const satisfies Readonly<Key<true>[]>;
 
-export const operatorKeys: Key[] = [
+export const operatorKeys = [
   { id: 'divide', order: 4, value: '/' },
   { id: 'multiply', order: 8, value: '*' },
   { id: 'subtract', order: 12, value: '-' },
   { id: 'add', order: 16, value: '+' },
   { id: 'equals', order: 18, value: '=' },
-];
+] as const satisfies Readonly<Key[]>;
 
 export const numericKeys: Key[] = [
   { id: 'seven', order: 5, value: '7' },
@@ -63,7 +58,3 @@ export const actionFunctionMap = {
   clear: clearAll,
   'clear-one': clearOne,
 };
-
-export type ActionFunctionMapKey = keyof typeof actionFunctionMap;
-
-export type OperatorValue = Parameters<typeof addOperator>[0];

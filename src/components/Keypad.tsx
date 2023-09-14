@@ -4,14 +4,12 @@ import { useColorScheme } from '@src/hooks';
 import { useAppDispatch, useAppSelector } from '@src/app/hooks';
 import { changeCalculation, selectCalculation } from '@src/app/calculatorSlice';
 import {
-  ActionFunctionMapKey,
   actionFunctionMap,
   actionKeys,
   colorMap,
   halfWidthKeys,
   numericKeys,
   operatorKeys,
-  OperatorValue,
 } from '@src/constants';
 import { Key } from './Key';
 
@@ -34,8 +32,7 @@ export const Keypad = () => {
       {actionKeys.map((actionKey) => (
         <Key
           onClick={() => {
-            const actionFunction =
-              actionFunctionMap[actionKey.id as ActionFunctionMapKey];
+            const actionFunction = actionFunctionMap[actionKey.id];
             const newCalculation = actionFunction(calculation.currentValue);
 
             dispatch(changeCalculation({ calculation: newCalculation }));
@@ -69,7 +66,7 @@ export const Keypad = () => {
               );
             } else {
               const newCalculation = addOperator(
-                operatorKey.value as OperatorValue,
+                operatorKey.value,
                 calculation.currentValue,
               );
 
