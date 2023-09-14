@@ -25,12 +25,19 @@ export const Calculator = () => {
         <Logo />
         <ColorSchemeToggle />
       </Flex>
-      <Flex direction='column' gap='sm' sx={{ flex: 1, padding: 20 }}>
-        <Display />
+      <Flex
+        direction='column'
+        justify='space-between'
+        gap='xs'
+        sx={{ flex: 1, padding: 20 }}
+      >
+        <Flex direction='column' justify='flex-end' sx={{ flex: 1 }}>
+          <Display />
+        </Flex>
         <Flex
           direction='column'
           justify='space-between'
-          gap='2.5rem'
+          gap='1.5rem'
           sx={(theme) => ({ flex: 1, paddingTop: theme.spacing.sm })}
         >
           <Keypad />
