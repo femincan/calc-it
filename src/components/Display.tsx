@@ -19,7 +19,7 @@ export const Display = () => {
   const fontSize = adjustFontSizeByLength(calculation.currentValue.length);
 
   return (
-    <Flex direction='column' sx={{ fontSize }}>
+    <Flex direction='column' sx={{ fontSize, textAlign: 'right' }}>
       <Text
         opacity={0.4}
         size='1em'
