@@ -18,10 +18,12 @@ export const calculatorSlice = createSlice({
         state.pastValue = state.currentValue;
       }
 
-      if (action.payload.calculation === '') {
-        state.currentValue = '0';
-      } else {
-        state.currentValue = action.payload.calculation;
+      if (action.payload.calculation.length <= 19) {
+        if (action.payload.calculation === '') {
+          state.currentValue = '0';
+        } else {
+          state.currentValue = action.payload.calculation;
+        }
       }
     },
   },
