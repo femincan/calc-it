@@ -20,16 +20,20 @@ export const calculatorSlice = createSlice({
 
       if (action.payload.calculation.length <= 19) {
         if (action.payload.calculation === '') {
-          state.currentValue = '0';
+          state.currentValue = initialState.currentValue;
         } else {
           state.currentValue = action.payload.calculation;
         }
       }
     },
+    resetPastCalculation: (state) => {
+      state.pastValue = initialState.pastValue;
+    },
   },
 });
 
-export const { changeCalculation } = calculatorSlice.actions;
+export const { changeCalculation, resetPastCalculation } =
+  calculatorSlice.actions;
 
 export const selectCalculation = (state: RootState) => state.calculator;
 

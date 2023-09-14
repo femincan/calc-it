@@ -2,7 +2,11 @@ import { addNumber, addOperator, getResult } from 'calculator-utility';
 import { Box, Flex, px } from '@mantine/core';
 import { useColorScheme } from '@src/hooks';
 import { useAppDispatch, useAppSelector } from '@src/app/hooks';
-import { changeCalculation, selectCalculation } from '@src/app/calculatorSlice';
+import {
+  changeCalculation,
+  resetPastCalculation,
+  selectCalculation,
+} from '@src/app/calculatorSlice';
 import {
   actionFunctionMap,
   actionKeys,
@@ -32,6 +36,9 @@ export const Keypad = () => {
       {actionKeys.map((actionKey) => (
         <Key
           onClick={() => {
+            if (actionKey.id === 'clear') {
+              dispatch(resetPastCalculation());
+            }
             const actionFunction = actionFunctionMap[actionKey.id];
             const newCalculation = actionFunction(calculation.currentValue);
 
